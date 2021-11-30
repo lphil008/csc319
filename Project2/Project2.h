@@ -13,6 +13,7 @@ using std::ostream;
 using namespace std;
 
 
+
 class nameBasic {
 
 private:
