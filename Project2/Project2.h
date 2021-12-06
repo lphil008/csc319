@@ -145,5 +145,9 @@ public:
     float getmoviescore(){
         float movie_score = moviescore();
         return movie_score;
+    };// this is a 'get' function from the moviescore in the movieScore class
+    
+    
+    
+    
 };
-
