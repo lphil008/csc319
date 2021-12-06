@@ -111,27 +111,39 @@ public:
     };
 };
 
-class movieScore{
-/*
-These functions don't work yet. But essencially...
+class movieScore : public titleRatings{
+
+
 private:
-    float moviescore;
-    int titleRatings.averageRating();// this needs to get the averageRating from the titleRatings class.
-    int titleRatings.numVotes();// this needs to get the numVotes from the titleRatings class.
+    
+    float ratings;
+    int votes;
+    float score;
+
+
 public:
-    getaverageRating():titleRatings();// this is the 'get' function from the titleRatings class
-    getnumVotes():titleRatings();// this is the 'get' function from the titleRatings class 
- 
-*/   
+    
+    void averageRating(){
+        ratings = getaverageRating();
+    };
+    void numVotes(){
+        votes = getnumVotes();
+    };
+    float moviescore(){
+        score = ratings*votes;
+        return score;
+    };
+
 };
 
-class actorScore{
+class actorScore : movieScore{
 
 private:
     string nconst;
     float actorScore;
 public:
-    //getmoviescore(): movieScore; this is a 'get' function from the moviescore in the movieScore class
-    
+    float getmoviescore(){
+        float movie_score = moviescore();
+        return movie_score;
 };
 
